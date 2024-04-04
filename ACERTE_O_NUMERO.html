@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codeacademy001</title>
+</head>
+<body>
+
+    <script>
+        let lives = 5;
+        const max = 10;
+        const min = 1;
+        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min; 
+        do {   //estrutura de repetição ou "vidas" do usuario, ele tem 5 vidas e a cada reinicio do programa ele perde 1
+            let number = window.prompt('Digite um numero entre 1 e 10!'); //variavel para guardar o valor digitado pelo usuario
+            if (number > 0 && number < 11){ //se o numero for maior do que 0 e menor do que 10 o programa ira rodar
+                    window.alert ('Você chutou o numero: ' + number)
+                    if (number == randomNumber){  //se o numero for igual ao numero aleatório esse if ira logar
+                        window.alert ('PARABENS VOCE ACERTOU!!! O numero aleatório é: ' + randomNumber);
+                        lives = 0;
+                        break;
+                    }else if (number < randomNumber){                                               
+                        window.alert ('Você errou!!! O numero é maior do que ' + number); //se o numero for diferente do numero aleatorio esse else ira rodar com a mensagem de maior
+                        window.alert ('Você tem mais ' + lives + ' tentativas');
+                        lives --;
+                    }else if (number > randomNumber){
+                        window.alert ('Você errou!!! O numero é menor do que ' + number); //se o numero for diferente do numero aleatorio esse else ira rodar com a mensagem de menor
+                        window.alert ('Você tem mais ' + lives + ' tentativas');
+                        lives --;
+                    }
+            }else if(number <= 0 || number >= 11){ //se o numero for menor do que 0 o programa não ira rodar
+                window.alert('Numero digitado não aceito, digite novamente.');
+            }
+                    if (lives == 0 && number !== randomNumber){
+                    window.alert ('O numero aleatório era: ' + randomNumber);
+                    }
+        } while (lives > 0)
+
+
+    </script>
+ 
+</body>
+</html>

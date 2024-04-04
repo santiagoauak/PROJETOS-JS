@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //define a função para multiplicação
+        function multiplicacao() {
+            window.alert ('O resultado da multiplicação é:'  + number1 * number2);
+        }
+        // define a função para divisao
+        function divisao() {
+            window.alert ('O resultado da divisão é de: ' + number1 / number2);
+        }
+        // define a função para soma
+        function soma() {
+           window.alert (`O resultado da soma é de:  ${parseInt(number1) + parseInt(number2)}`)
+        }
+        // define a função para subtracao
+        function subtracao() {
+            window.alert ('O resultado da subtração é de: ' + (number1 - number2));
+        } 
+    //variaveis para o usuario escolher o numero e para escolher a operação
+        let number1 = window.prompt ('Qual o primeiro numero?');
+        let number2 = window.prompt  ('Qual o segundo numero?');
+        let operacao = window.prompt ('Que tipo de operação deseja realizar?').toLowerCase();
+        // função if para qual operação o usuario escolheu realizar
+            if (operacao === 'multiplicação' || operacao === 'multiplicacao' || operacao === 'multiplicacão' || operacao === 'multiplicaçao'){
+                multiplicacao()
+            }else if (operacao === 'soma'){
+                soma()
+            }else if (operacao === 'subtração' || operacao === 'subtraçao' || operacao === 'subtracao'|| operacao === 'subtracão'){
+                subtracao()
+            }else if (operacao === 'divisão' || operacao === 'divisao'){
+                divisao()
+            }else {
+                window.alert ('Não entendi esse comando!'); 
+            }
+    </script>
+</body>
+</html>
